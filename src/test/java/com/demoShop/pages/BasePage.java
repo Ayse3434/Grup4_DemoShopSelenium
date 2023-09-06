@@ -18,6 +18,7 @@ public abstract class BasePage {
     public WebElement hoverMenu;
 
     public void navigateMenu(String menu, String hoverMenu) {
+
         BrowserUtils.waitFor(1);
         WebElement element = Driver.get().findElement(By.xpath("(//a[contains(text(),'"+menu+"')])[1]"));
         if (menu.equals("Computers") || menu.equals("Electronics")) {
@@ -28,6 +29,5 @@ public abstract class BasePage {
         }
 
     }
-
 
 }
