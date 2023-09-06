@@ -18,12 +18,16 @@ public abstract class BasePage {
     public WebElement hoverMenu;
 
     public void navigateMenu(String menu, String hoverMenu) {
-        WebElement element = Driver.get().findElement(By.xpath("//a[contains(text(),'" + menu + "')])[1]"));
+
+        BrowserUtils.waitFor(1);
+        WebElement element = Driver.get().findElement(By.xpath("(//a[contains(text(),'"+menu+"')])[1]"));
         if (menu.equals("Computers") || menu.equals("Electronics")) {
             BrowserUtils.hover(element);
-            Driver.get().findElement(By.xpath("(//a[contains(text(),'" + hoverMenu + "')])[1]")).click();
+            Driver.get().findElement(By.xpath("(//a[contains(text(),'"+hoverMenu+"')])[1]")).click();
         } else {
             element.click();
         }
+
     }
+
 }
