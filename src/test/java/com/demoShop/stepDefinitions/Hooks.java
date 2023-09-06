@@ -1,7 +1,6 @@
 package com.demoShop.stepDefinitions;
 
 import com.demoShop.utilities.Driver;
-import com.demoShop.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -25,7 +24,7 @@ public class Hooks {
             final byte[] screenshot=((TakesScreenshot)Driver.get()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot,"image/png","screenshot");
         }
-        Driver.closeDriver();
+       // Driver.closeDriver();
     }
     @Before ("@db")
     public void setUpDB(){
