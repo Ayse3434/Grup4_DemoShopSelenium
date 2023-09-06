@@ -1,7 +1,7 @@
 package com.demoShop.pages;
 
-public class LoginPage {
+public class LoginPage extends BasePage {
 
 
-    // test
+
 }
