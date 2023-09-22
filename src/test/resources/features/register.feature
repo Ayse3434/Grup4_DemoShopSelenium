@@ -28,7 +28,7 @@ Feature: Demo Web Shop Register User Test
       | firstName | lastName | email           | password | confirmpassword | message                                             |
       |           | test     | grup4@gmail.com | 123456   | 123456          | First name is required.                              |
       | grup4     |          | grup4@gmail.com | 123456   | 123456          | Last name is required.                               |
-      | grup4     | test     |                 | 123456   | 123456          | email is required.                                  |
+      | grup4     | test     |                 | 123456   | 123456          | Email is required.                                  |
       | grup4     | test     | grup4gmail.com  | 123456   | 123456          | Wrong email                                         |
       | grup4     | test     | grup4@gmailcom  | 123456   | 123456          | Wrong email                                         |
       | grup4     | test     | grup4@gmail     | 123456   | 123456          | Wrong email                                         |
