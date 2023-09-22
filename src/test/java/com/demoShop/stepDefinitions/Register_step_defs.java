@@ -57,25 +57,23 @@ public class Register_step_defs {
 
     }
 
+
+
+    @Then("The warning message contains {string}")
+    public void theWarningMessageContains(String message) {
+        registerPage.verifyMessage(message);
+
+    }
+
     @When("And The user enters credentials {string}, {string}, {string}, {string},{string} in field")
     public void andTheUserEntersCredentialsInField(String firstName, String lastName, String email, String password, String confirmpassword) {
+
         registerPage.firstNameInbox.sendKeys(firstName);
         registerPage.lastNameInbox.sendKeys(lastName);
         registerPage.emailInbox.sendKeys(email);
         registerPage.passwordInbox.sendKeys(password);
         registerPage.confirmPasswordInbox.sendKeys(confirmpassword);
 
-    }
 
-    @Then("The warning message contains {string}")
-    public void theWarningMessageContains(String message) {
-      /*  Assert.assertTrue(registerPage.firstNameWrongMsj.isDisplayed());
-        registerPage.lastNameWrongMsj.isDisplayed();
-        registerPage.emailWrongMsj.isDisplayed();
-        registerPage.emailWrongMsj2.isDisplayed();
-        registerPage.passwordWrongMsj.isDisplayed();
-        registerPage.confirmPasswordWrongMsj.isDisplayed();
-        registerPage.confirmPasswNotMatchWrongMsj.isDisplayed();
-*/
     }
 }

@@ -1,5 +1,8 @@
 package com.demoShop.pages;
 
+import com.demoShop.utilities.Driver;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -51,5 +54,16 @@ public class RegisterPage extends BasePage{
 
     @FindBy(xpath = "//span[@for='ConfirmPassword']")
     public WebElement confirmPasswNotMatchWrongMsj;
+
+    @FindBy(xpath = "//span[text()='The password and confirmation password do not match.']")
+    public WebElement warningMessage;
+
+    public void verifyMessage(String expectedMessage){
+        WebElement element= Driver.get().findElement(By.xpath("//span[text()='"+expectedMessage+"']"));
+        String acutuelMessage=element.getText();
+        Assert.assertEquals(acutuelMessage,expectedMessage);
+
+
+    }
 
 }

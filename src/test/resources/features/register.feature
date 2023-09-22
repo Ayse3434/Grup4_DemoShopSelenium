@@ -5,7 +5,7 @@ Feature: Demo Web Shop Register User Test
     Given The user navigate to web page url
     When The user Click to register link
 
-@aa
+  @aa
   Scenario:User Register with valid date
 
     And  The user click to gender button
@@ -26,16 +26,16 @@ Feature: Demo Web Shop Register User Test
     Examples:
 
       | firstName | lastName | email           | password | confirmpassword | message                                             |
-      |           | test     | grup4@gmail.com | 123456   | 123456          | First name is required                              |
-      | grup4     |          | grup4@gmail.com | 123456   | 123456          | Last name is required                               |
-      | grup4     | test     |                 | 123456   | 123456          | email is required                                   |
+      |           | test     | grup4@gmail.com | 123456   | 123456          | First name is required.                              |
+      | grup4     |          | grup4@gmail.com | 123456   | 123456          | Last name is required.                               |
+      | grup4     | test     |                 | 123456   | 123456          | email is required.                                  |
       | grup4     | test     | grup4gmail.com  | 123456   | 123456          | Wrong email                                         |
       | grup4     | test     | grup4@gmailcom  | 123456   | 123456          | Wrong email                                         |
       | grup4     | test     | grup4@gmail     | 123456   | 123456          | Wrong email                                         |
-      | grup4     | test     | grup4@gmail     |          | 123456          | Password is required.                               |
-      | grup4     | test     | grup4@gmail     | 123456   |                 | Confirm password is required.                       |
+      | grup4     | test     | grup4@gmail.com |          | 123456          | Password is required.                               |
+      | grup4     | test     | grup4@gmail.com | 123456   |                 | Password is required.                       |
       | grup4     | test     | grup4g@mail.com | 12345    | 123456          | The password should have at least 6 characters.     |
-      | grup4     | test     | grup4g@mail.com | 123456   | 12345           | The password and confirmation password do not match |
+      | grup4     | test     | grup4g@mail.com | 123456   | 12345           | The password and confirmation password do not match. |
 
 
 
